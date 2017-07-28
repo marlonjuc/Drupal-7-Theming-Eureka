@@ -1,0 +1,74 @@
+/* GLOBAL STYLES */
+#formwrapper{
+    width:100%!important;
+}
+
+.rowleft{
+    display: none;
+}
+
+div.col-md-6{
+    width:100%!important;
+    padding-bottom:0;
+}
+
+.form-top-aligned div.row-fluid{
+    padding-bottom:0px;
+}
+
+input#id123-button-send {
+    background-color: #d3d0c2 !important;
+    color: #4c4c4a !important;
+    padding: 15px 50px !important;
+    border-radius: 90px;
+    font-weight: 900;
+}
+
+.label-text{
+    font-size:12px !important;
+    color: #A5A5A4 !important;
+}
+
+.class123-checkbox .label-text {
+    font-size: 10px !important;
+    line-height: 12px !important;
+}
+
+div.big-container.user-own-css input[type="text"], div.big-container.user-own-css input[type="email"]{
+    -webkit-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+    border-radius: initial !important;
+    height: 45px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none !important;
+    font-size: 12px;
+}
+.subitem.col-lg-9.col-md-9.col-sm-9{
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    #formwrapper{
+    width: 500px !important;
+    }
+    label-text{
+    font-size:14px !important;
+    }
+    div.big-container.user-own-css input[type="text"], div.big-container.user-own-css input[type="email"]{
+    font-size: 14px;
+    }
+}
+
+/* NEWSLETTER MODAL STYLES */
+div#fieldcontainer2{
+     padding-right: 0;
+}
+
+#fieldcontainer2, #fieldcontainer3{
+   width: 50% !important;
+}
+
+#fieldcontainer4{
+    padding: 0 5% !important;
+}

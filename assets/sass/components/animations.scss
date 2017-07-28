@@ -1,0 +1,25 @@
+.animations {
+	.line{
+		display: block;
+		overflow: hidden;
+		.line__content{
+			display: inline-block;
+			transition: transform 0.8s cubic-bezier(0.345, 0.005, 0.07, 1);
+			transform: translateY(-100%) translateZ(0);
+		}
+	}
+	.start-animation {
+		.line {
+			.line__content{
+				transform: translateY(0px);
+		    	transform: translateY(0px) translateZ(0);
+			 }
+			 &.line-1{
+				.line__content{
+				   	transition-delay: 800ms;
+				    transition-duration: 0.5s;
+				}
+			}
+		}
+	}
+}

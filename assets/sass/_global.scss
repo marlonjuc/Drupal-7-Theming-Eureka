@@ -1,0 +1,316 @@
+/*
+*  Tags
+*/
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: $eurekaWhite;
+}
+
+a, a:hover, a:focus, a:active {
+    outline: none;
+    color: $eurekaBlack;
+    text-decoration: none;
+    font-family: $graphicSemiBold;
+}
+
+h1, h2, h3, h4, h5, h6, .h7, .h8 {
+    font-weight: bold;
+    font-family: $graphicBlack;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+.h7 {
+    font-size: 14px;
+}
+
+.h8 {
+    font-size: 24px;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    h6 {
+        font-size: 16px;
+    }
+
+    .h7 {
+        font-size: 14px;
+    }
+
+    .h8 {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1025px) {
+    h1 {
+        font-size: 55px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 32px;
+    }
+
+    h5 {
+        font-size: 24px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+
+    .h7 {
+        font-size: 16px;
+    }
+
+    .h8 {
+        font-size: 36px;
+    }
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+p.secondary {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+ul, ol {
+
+}
+
+/*Separator for Title Section*/
+.h1-separator {
+    width: 80px;
+    height: 4px;
+    background-color: #EEEEEE;
+    display: block;
+    margin-top: 12px;
+}
+
+/*Separator for Title Section*/
+
+.h2-separator {
+    width: 45px;
+    height: 2px;
+    background-color: #EEEEEE;
+    display: block;
+    margin-top: 12px;
+    @include media(sm) {
+        width: 80px;
+        height: 4px;
+    }
+}
+
+
+.page {
+    width: 100%;
+    float: left;
+}
+
+.global-wrapper{
+    max-width:1440px;
+    padding: 0;
+    margin-right:auto;
+    margin-left:auto;
+
+    @include media(md){
+        .global-wrapper {
+            padding: 0 40px;
+        }
+    }
+}
+
+.section-full-width{
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.section-padding{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.section-padding.fullmobile{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@include media(sm){
+  .section-padding,
+  .section-padding.fullmobile {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@include media(md){
+  .section-padding,
+  .section-padding.fullmobile {
+    padding-right: 40px; /* 25px + 15px of row negative margin */
+    padding-left: 40px;
+  }
+}
+@include media(lg){
+  .section-padding,
+  .section-padding.fullmobile{
+    padding-right: 80px; /* 65px + 15px of row negative margin */
+    padding-left: 80px;
+  }
+}
+@media screen and (min-width:1441px){
+  .section-full-width{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.footer {
+    float: left;
+    width: 100%;
+}
+
+/*
+*
+* RateYo! Jquery Plugin Styles
+*/
+
+.jq-ry-container {
+    position: relative;
+    padding: 0 0;
+    line-height: 0;
+    display: block;
+    cursor: pointer;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.jq-ry-container[readonly="readonly"] {
+    cursor: default;
+}
+
+.jq-ry-container > .jq-ry-group-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group {
+    position: relative;
+    line-height: 0;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group > svg {
+    display: inline-block;
+}
+
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-normal-group {
+    width: 100%;
+}
+
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-rated-group {
+    width: 0;
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+/* Image Zoom Animation */
+.bg-zoom {
+   .img-zoom {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        position: absolute;
+        transform: scale(1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: transform 3s ease 0s;
+        background-position: center center;
+    }
+    &:hover .img-zoom {
+        transform: scale(1.05);
+    }
+}
+.img-zoom {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    position: absolute;
+    transform: scale(1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 3s ease 0s;
+    background-position: center center;
+    &:hover {
+        transform: scale(1.05);
+    }
+}

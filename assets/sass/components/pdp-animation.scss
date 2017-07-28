@@ -1,0 +1,177 @@
+.product.animate{
+    .pdp-new  {
+        animation-name: pdp-sales-slidedown-show-anim;
+        animation-duration: 500ms;
+        animation-timing-function: linear;
+        animation-delay: 700ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+    }
+
+    .pdp-manufacturingproductname {
+        animation-name: pdp-sales-slidedown-show-anim;
+        animation-duration: 500ms;
+        animation-timing-function: linear;
+        animation-delay: 700ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+    }
+
+    .pdp-colors ul {
+        animation-name: pdp-sales-slidelr-anim;
+        animation-duration: 500ms;
+        animation-timing-function: linear;
+        animation-delay: 700ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+    }
+
+    .pdp-rating,
+    .pdp-pricing,
+    .pdp-offer-disclaimer,
+    .pdp-product-description {
+        animation-name: pdp-sales-slidedown-show-anim;
+        animation-duration: 500ms;
+        animation-timing-function: linear;
+        animation-delay: 950ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+    }
+
+    .pdp-buttons {
+        animation-name: pdp-sales-show-anim;
+        animation-duration: 500ms;
+        animation-timing-function: linear;
+        animation-delay: 950ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+    }
+
+    //Animate Quantity submenu
+    .pdp-quantity .selectric {
+        animation-name: pdp-quantity-anim;
+        animation-duration: 250ms;
+        animation-timing-function: linear;
+        animation-delay: 950ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+    }
+
+    .selectric .label,
+    .selectric .button {
+        animation-name: pdp-sales-show-anim;
+        animation-duration: 250ms;
+        animation-timing-function: linear;
+        animation-delay: 1100ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+    }
+    /*End Animate Quatity */
+
+    .pdp-carousel-wrapper {
+        animation-name: pdp-sales-slideup-show-anim;
+        animation-duration: 500ms;
+        animation-timing-function: linear;
+        animation-delay: 1000ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+    }
+
+}
+
+.product{
+    .pdp-slidedown-show {
+        animation: pdp-sales-slidedown-show-anim 500ms ease 1;
+        -webkit-animation: pdp-sales-slidedown-show-anim 500ms ease 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    .pdp-slideup-show {
+        animation: pdp-sales-slideup-show-anim 500ms ease 1;
+        -webkit-animation: pdp-sales-slideup-show-anim 500ms ease 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    .pdp-slideLeftRight {
+        animation: pdp-sales-slidelr-anim 500ms ease 1;
+        -webkit-animation: pdp-sales-slidelr-anim 500ms ease 1;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+}
+
+@keyframes pdp-sales-banner-anim {
+    0% {
+        background-position: 0 -73px;
+        opacity: 0;
+    }
+    100% {
+        background-position: 0 0;
+        opacity: 1;
+    }
+}
+
+@keyframes pdp-sales-banner-h2-anim {
+    0% {
+        opacity: 0;
+        transform: scale(1.03);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pdp-sales-slidedown-show-anim {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pdp-sales-slideup-show-anim {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pdp-sales-slidelr-anim {
+    from {
+        max-width: 0;
+    }
+    to {
+        max-width: 100%;
+    }
+}
+
+@keyframes pdp-sales-show-anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pdp-quantity-anim {
+    0% {
+        max-width: 0;
+        margin-right: 50px
+    }
+    100% {
+        max-width: 100px;
+        margin-right: 0px
+    }
+}

@@ -1,0 +1,327 @@
+@mixin set_primary_button_color($data){
+  background-color: map-get( $data, 'bg_color');
+  background-image: map-get( $data, 'bg_gradient');
+  color: map-get( $data, 'font_color');
+  border-color: map-get( $data, 'border_color');
+}
+
+@mixin set_secondary_button_color($data){
+  background-color: map-get( $data, 'bg_color');
+  color: map-get( $data, 'font_color');
+  border-color: map-get( $data, 'border_color');
+  &:before{
+    border-color: map-get( $data, 'border_color');
+  }
+  &:after{
+    @if map-get( $data, 'hide_after_image'){
+      display: none;
+    }
+  }
+  &:hover{
+    border-color: map-get( $data, 'border_color_hover');
+    &:before{
+      border-color: map-get( $data, 'border_color_hover_before');
+    }
+  }
+}
+
+@mixin keyframe_animation($duration, $to_bottom) {
+  animation: $duration underline_animation;
+  @keyframes underline_animation{
+    from {bottom:0px; opacity: 0;width: 100%;}
+    to {bottom:$to_bottom; opacity: 1;width:70%;}
+  }
+}
+$primary_buttons:(
+  //gray background to green background
+  gg: (
+    bg_color: $eurekaBeige,
+    font_color: #333,
+    bg_gradient: linear-gradient(to left, #D3D0C2 50%, $eurekaPrimaryGreen 50%),
+    border_color: $eurekaBeige
+  ),
+        gl: (
+                bg_color: $eurekaGray4,
+                font_color: $eurekaSecondaryGray,
+                bg_gradient: linear-gradient(to left, $eurekaGray4 50%, $eurekaPrimaryGreen 50%),
+                border_color: $eurekaGray4
+        )
+);
+
+$secondary_buttons:(
+  //White background and Green border
+  wg: (
+    font_color: #333,
+    bg_color: transparent,
+    border_color: $eurekaPrimaryGreen,
+    border_color_hover: transparent,
+    border_color_hover_before : $eurekaPrimaryGreen
+  ),
+  //Transparent backgorund and White border
+  tw: (
+    font_color: #FFF,
+    bg_color: transparent,
+    border_color: #FFF,
+    border_color_hover: transparent,
+    border_color_hover_before : #FFF
+    //hide_after_image: none
+  )
+);
+
+.button{
+  border-radius: 99px;
+  cursor: pointer;
+  display: block;
+  font-family: $graphicBlack;
+  padding: 19px 10px 17px 10px;
+  font-size: rem(18);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 304px;
+  width: 100%;
+  margin:12px auto;
+  text-decoration: none;
+  &:after{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 13px;
+    background-size: contain;
+    background-repeat:no-repeat;
+    margin-left: 5px;
+  }
+  &:hover{
+    font-family: $graphicBlack;
+    &:after{
+      transform: translateX(25%);
+    }
+  }
+
+  //Primary type button
+  &.primary{
+    border: 2px solid transparent;
+    transition:all 1s ease;
+    background-size: 200% 100%;
+    background-position:right bottom;
+
+    &:hover{
+      color: #000;
+      background-position:left bottom;
+    }
+    &:after{
+      background-image: url("../img/icon-global-button-arrow-grey.png");
+    }
+
+    //default colors for primary button
+    @include set_primary_button_color( map-get($primary_buttons, 'gg') );
+
+    @each $button_class, $primary_button in $primary_buttons {
+      &.#{$button_class} {
+        @include set_primary_button_color($primary_button);
+      }
+    }//End each
+
+  }
+
+  //Secondary type button
+  &.secondary{
+    border:3px solid transparent;
+    transition: all 0.4s ease-in-out 0s;
+    &:after{
+      background-image: url("../img/icon-global-button-arrow-green.png");
+    }
+    &:before{
+      content : "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 16%;
+      height : 1px;
+      width : 100%;
+      border: 2px solid transparent;
+      margin: 0 auto;
+      opacity: 0;
+    }
+    &:hover{
+      border:3px solid #ffffff;
+      position: relative;
+      &:before{
+        bottom: 16%;
+        opacity: 1;
+        width: 70%;
+        @include keyframe_animation(0.5s, 16%);
+        border: 3px solid $eurekaPrimaryGreen;
+        border-top: none;
+      }
+    }
+
+    @include set_secondary_button_color(map-get($secondary_buttons, 'wg'));
+
+    @each $button, $secondary_button in $secondary_buttons {
+      &.#{$button} {
+        @include set_secondary_button_color($secondary_button);
+      }
+    }//End each
+
+    //Add cart button circle
+    &.circle-button{
+      color:transparent;
+      //Return to origin button style on tablet
+      &.circle-only-mobile{
+        @include media(sm){
+          width: 100%;
+          background: none;
+          height: auto;
+          padding: 19px 10px 17px 10px;
+          &:after{
+            display: inline-block;
+          }
+          &:hover{
+            border: 3px solid transparent;
+            border-radius: inherit;
+            &:before{
+              border-bottom: 3px solid transparent;
+            }
+          }
+        }
+      }
+
+      @each $button, $secondary_button in $secondary_buttons {
+        &.#{$button} {
+          &:hover{
+            border-color: map-get( $secondary_button, 'border_color');
+          }
+          &.circle-only-mobile{
+            @include media(sm){
+              color: map-get( $secondary_button, 'font_color');
+              &:hover{
+                border-color: map-get( $secondary_button, 'border_color_hover');
+                &:before{
+                  border-color: map-get( $secondary_button, 'border_color');
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  //Add cart button circle
+  &.circle-button{
+    color: transparent;
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 33px;
+    background-position: center;
+    padding: 25px;
+    background-size: 50%;
+    cursor: pointer;
+    border:3px solid $eurekaPrimaryGreen;
+    background-color: #FFF;
+    &:after{
+      display: none;
+    }
+    &:hover{
+      border:3px solid $eurekaPrimaryGreen;
+      border-radius:50%;
+      background-color: $eurekaPrimaryGreen;
+      &:before{
+        border:none;
+      }
+    }
+    //Cart image
+    &.cart{
+      background-image: url("../img/icon-global-add-to-cart.png");
+    }
+    //Arrow image
+    &.arrow{
+      background-image: url("../img/icon-global-button-arrow-grey.png");
+    }
+    //Return to origin button style on tablet
+    &.circle-only-mobile{
+      @include media(sm){
+        width: auto;
+        background: none;
+        color: transparent;
+        height: auto;
+        padding: 19px 10px 17px 10px;
+        &:after{
+          display: inline-block;
+        }
+        &:hover{
+          border: 3px solid transparent;
+          border-radius: inherit;
+          &:before{
+            border-bottom: 3px solid transparent;
+          }
+        }
+      }
+    }
+    @each $button, $secondary_button in $secondary_buttons {
+      &.#{$button} {
+        &:hover{
+          border-color: map-get( $secondary_button, 'border_color');
+        }
+        &.circle-only-mobile{
+          @include media(sm){
+            color: map-get( $secondary_button, 'font_color');
+            &:hover{
+              border-color: map-get( $secondary_button, 'border_color_hover');
+              &:before{
+                border-color: map-get( $secondary_button, 'border_color');
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //use icon "+" on button
+  &.plus{
+    &:after{
+      background-image: url("../img/icon-global-button-plus-sign.png");
+      height: 15px;
+    }
+  }
+
+  //use logo paypal on button
+  &.paypal{
+    &:after{
+      background-image: url("../img/paypal-logo.png");
+      width: 73px;
+      height: 20px;
+      vertical-align: middle;
+
+    }
+    &:hover{
+      &:after {
+        transform: translateX(0);
+      }
+    };
+  }
+
+  //without icon
+   &.clear{
+    &:after{
+      display: none;
+    }
+  }
+
+  &.no-centered {
+    margin: 35px 0;
+  }
+
+  &.disabled {
+    cursor: default;
+    border-color: $eurekaGray4;
+    pointer-events: none;
+    a {
+      cursor: default;
+      color: $eurekaGray2;
+    }
+  }
+}

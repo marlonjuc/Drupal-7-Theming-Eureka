@@ -1,0 +1,257 @@
+.where-to-buy{
+	.title{
+		font-family: $graphicBlack;
+		font-size: rem(32);
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.search-content{
+		min-height: 478px;
+		max-height: 750px;
+		overflow-y: scroll;
+		background-image: url("../img/where-to-buy/bg_mobile.png");
+		background-size: cover;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		.input-search{
+			margin-top: 10px;
+			margin-bottom:20px;
+			.search{
+				position:relative;
+				input{
+					padding: 0 50px 0 15px;
+					border: 2px solid $eurekaGray4;
+					box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.10);
+					font-family: $graphicRegular;
+					font-size: rem(14);
+					color: $eurekaSecondaryGray;
+					line-height: percentage(32/14);
+					width: 292px;
+					height: 50px;
+					&:focus{
+						outline: none;
+					}
+				}
+				.search-icon{
+					position: absolute;
+					top: 13px;
+					right: 15px;
+					font-size: 2.4rem;
+					cursor: pointer;
+				}
+			}
+		}
+		.search-results{
+			width: 100%;
+			max-width: 295px;
+			display: none;
+			.all-results{
+				text-transform: uppercase;
+				font-family: $graphicBlack;
+				font-size: rem(18);
+			}
+			.near-stores{
+				text-transform: uppercase;
+				font-family: $graphicRegular;
+				font-size: rem(14);
+				margin-bottom: 10px;
+			}
+			.store-box{
+				margin-top: 15px;
+				padding-bottom:10px;
+				border-bottom:1px solid $eurekaGray4;
+				.locator{
+					display: none;
+				}
+				.name{
+					font-family: $graphicBlack;
+					font-size: rem(18);
+				}
+				table{
+		    	width: 100%;
+					tr{
+						td{
+							font-family: $graphicRegular;
+							font-size: rem(12);
+							line-height: percentage(24/12);
+							color:$eurekaBlack;
+							&:last-child{
+								text-align: right;
+							}
+							a{
+								font-family: $graphicRegular;
+								font-size: rem(12);
+								color: $eurekaSecondaryGray;
+								line-height: percentage(32/12);
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+				&:last-child{
+					border-bottom:none;
+					margin-bottom: 15px;
+				}
+				&:hover{
+					background:$eurekaGray4;
+					cursor: pointer;
+				}
+				&.selected{
+					background:$eurekaGray4;
+					cursor: default;
+				}
+			}
+			&.active{
+				display: block;
+			}
+		}
+		.label{
+			font-family: $graphicBlack;
+			font-size: rem(28);
+			color: $eurekaWhite;
+			width: 250px;
+			margin:auto;
+			text-transform: uppercase;
+			display: block;
+			white-space: normal;
+		}
+		&.active{
+			background: $eurekaWhite;
+			.label{
+				display: none;
+			}
+		}
+		#map{
+			display: none;
+		}
+	}
+	@include media(sm){
+		.title{
+			text-align: left;
+			font-size: rem(40);
+		}
+		.search-content{
+			min-height: 672px;
+			max-height: 770px;
+			background-image: url("../img/where-to-buy/bg_tablet.png");
+			.input-search{
+				width: 100%;
+				margin-bottom: 25px;
+				.search{
+					width: 440px;
+					input{
+						width: 100%;
+					}
+				}
+			}
+			.label{
+				font-size: rem(40);
+				width: 500px;
+			}
+			.search-results{
+				max-width: none;
+				.near-stores{
+					margin-bottom: 40px;
+				}
+				.store-box{
+					padding-bottom: 15px;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+	@include media(md){
+		.title{
+			opacity: 0;
+			transition: all .3s;
+			&.show{
+				opacity: 1;
+			}
+		}
+		.search-content{
+			min-height: 702px;
+			max-height: none;
+			background-image: url("../img/where-to-buy/bg_desktop.png");
+			overflow:hidden;
+			.input-search{
+		    margin-top: 15px;
+		    margin-left: 60px;
+		    width: 440px;
+		    align-self: baseline;
+		    margin-bottom: 0;
+		    z-index: 2;
+		    .search{
+		    	input{
+  		    	box-shadow: none;
+		    	}
+		    }
+			}
+			.search-results{
+				width: 438px;
+				align-self: baseline;
+				margin-left: 62px;
+				min-height: initial;
+				max-height: 544px;
+				background:$eurekaWhite;
+				overflow-y: scroll;
+				z-index: 2;
+				.search-text{
+					padding:10px 30px;
+					.near-stores{
+						margin-bottom: 0;
+					}
+				}
+				.store-box{
+					display: flex;
+					padding:10px;
+					margin: 0;
+					.locator{
+						display: inline-block;
+						padding-top: 4px;
+						position:relative;
+						.icon-locator{
+							font-size: rem(27);
+							color:$eurekaPrimaryGreen;
+							margin-right: 5px;
+							position:relative;
+						}
+						.number{
+							position: absolute;
+							font-size: rem(14);
+							left: 5px;
+							top: 5px;
+							color:$eurekaBlack;
+							font-family: $graphicRegular;
+						}
+					}
+					.store-content{
+						width: 100%;
+					}
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+			}
+			.label{
+				width: auto;
+				font-size: rem(45);
+				padding:0;
+			}
+			#map{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				display: block;
+				transition:all .4s;
+				z-index: -1;
+				&.active{
+					opacity: 1;
+					z-index: 1;
+				}
+			}
+		}
+	}
+}

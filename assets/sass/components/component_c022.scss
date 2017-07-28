@@ -1,0 +1,55 @@
+.component-c022 {
+    
+    text-align: center;
+    margin: 35px 0;
+    
+    p{
+        font-size: 13px;
+        margin: 0;
+        line-height: 1.2;
+    }
+    
+    h2{
+        text-transform: none;
+        font-family: "Graphik-Medium", Arial, sans-serif;
+        font-weight: normal;
+        font-size: 16px;        
+    }
+    
+    img{
+        width:auto;
+        max-height: 42px;
+    }
+
+    @include media(sm){ 
+        
+        h2{
+            font-size: 18px;        
+        }
+        p{
+            font-size: 16px;
+        }
+
+    }
+
+    @include media(md) {
+
+    }
+    
+}
+
+/*
+Parent container (needed styles to clear in tablet view)
+*/
+
+@include media(sm){ 
+    .view-customer-support .views-row-odd{
+        clear: both;
+    }
+}
+
+@include media(md) {
+    .view-customer-support .views-row-odd{
+        clear: none;
+    }
+}

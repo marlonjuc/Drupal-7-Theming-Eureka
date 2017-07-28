@@ -1,0 +1,157 @@
+.full-bg-page{
+
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    //Only for no results page
+    &.no-results {
+        padding-bottom: 15px;
+        background-position: center top;
+        .above-text {
+            position: relative;
+            top: 0;
+        }
+
+        .text {
+            max-width: 78%;
+            line-height: 18px;
+            font-size: 1.2857em;
+            margin-bottom: 75px;
+            font-family: $graphicSemiBold;
+        }
+
+        .search-box {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            margin-bottom: 10px;
+            form {
+                border-bottom: 4px solid $eurekaPrimaryGreen;
+                label {
+                    display: none;
+                }
+                input[type='text'] {
+                    background: none;
+                    width: 78%;
+                    height: 25px;
+                    border: none;
+                    font-size: 1.2857em;
+                    margin-bottom: 6px;
+                    color: $eurekaSecondaryGray;
+                    font-family: $graphicRegular;
+                    display: inline-block;
+                }
+                .views-exposed-widgets {
+                    position: relative;
+                    .views-exposed-widget.views-widget-filter-search_api_views_fulltext {
+                        width: 90%;
+                    }
+                }
+                .views-submit-button {
+                    @extend .icon-icon-search;                  
+                    color: $eurekaSecondaryGray;
+                    display: block;
+                    font-size: 32px;
+                    position: absolute;
+                    padding: 0;
+                    font-family: "aureka" !important;
+                    right: 0;
+                    .form-submit {
+                        background: none;
+                        border: none;
+                        display: block;
+                        height: 100%;
+                        margin: 0;
+                        position: absolute;
+                        text-indent: -9999px;
+                        top: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .component-c007 {
+            padding: 20px 15px;
+            .title {
+                color: $eurekaBlack;
+                margin-top: 0;
+            }
+        }
+    }
+
+    h2{
+        font-family: "Graphik-Bold";
+    }
+
+    .full-background {
+
+        z-index: 0;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+    }
+
+    .button{
+        margin-left: 0;
+        max-width: 200px;
+    }
+
+    .above-text {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        width: 100%;
+        color: #FFF;
+    }
+
+    @include media(sm) {
+        &.no-results {
+            .text {
+                margin-bottom: 10px;
+            }
+            .search-box {
+                margin-bottom: 80px;
+                max-width: 435px;
+            }
+        }
+        .above-text {
+            top: 100px;
+        } 
+        .component-c007 {
+            max-width: 315px;
+            float: left;
+        }       
+    }
+
+    @include media(md) {
+        &.no-results {
+            padding-bottom: 180px;
+            .above-text {
+                padding-top: 40px;
+            }
+            .title {
+                margin-top: 0;
+            }
+            .search-box {
+                max-width: 475px;
+            }
+            .text {
+                max-width: 40%;
+                line-height: 32px;
+                margin-bottom: 20px;
+            }
+            .component-c007 {
+                min-width: 100%;
+                margin-top: 155px;
+                float: none;
+            }
+        }
+        
+    }
+
+}

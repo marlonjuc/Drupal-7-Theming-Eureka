@@ -1,0 +1,27 @@
+.node-component-c009 {
+    &.node-teaser{
+        margin: 45px 0;
+
+        h5{
+            margin-bottom: 20px;
+        }
+
+    }
+}
+
+@include media(sm){ 
+    .node-component-c009 {
+        &.node-teaser{
+            
+
+        }
+    }
+}
+
+@include media(md) {
+    .node-component-c009 {
+        &.node-teaser{
+
+        }
+    }
+}

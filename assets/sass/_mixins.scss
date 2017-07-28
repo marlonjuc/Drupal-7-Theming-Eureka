@@ -1,0 +1,130 @@
+
+@mixin media($size, $orientation:"") {
+    $orientation_text: get_orientation_text($orientation);
+    @if $size==sm {
+        @media screen and (min-width: $screen-sm-min) #{$orientation_text} {
+            @content;
+        }
+    }
+    @else if $size==md {
+        @media screen and (min-width: $screen-md-min) #{$orientation_text} {
+            @content;
+        }
+    }
+    @else if $size==lg {
+        @media  screen and (min-width: $screen-lg-min) #{$orientation_text} {
+            @content;
+        }
+    }
+    @else if $size==xlg {
+        @media  screen and (min-width: $screen-xlg-min) #{$orientation_text} {
+            @content;
+        }
+    }
+    @else {
+        @media screen and (min-width: $size) #{$orientation_text} {
+            @content;
+        }
+    }
+}
+
+@function get_orientation_text($orientation:"") {
+    $orientation_text: "";
+    @if $orientation !="" {
+        $orientation_text: "and (orientation: " + $orientation")"
+    }
+    @return $orientation_text;
+}
+
+@function rem($px, $context: 10) {
+    @return ($px / $context) * 1rem;
+}
+
+@function em($px, $context: 16) {
+    @return ($px / $context) * 1em;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin ellipsis($lines) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin delay-children-animations($from, $to,$time, $delay){
+  @for $i from $from to $to {
+    &:nth-child(#{$i}) { transition:opacity $time $i * $delay ease-in-out; }
+  }
+}
+
+@function fluid-percentage ($parent, $element) {
+    @if unitless($element) {
+        $element: $element * 1px;
+    }
+    @if unitless($parent) {
+        $parent: $parent * 1px;
+    }
+    @return ($element * 100 / $parent) + '%';
+}
+
+// generic transform
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+}
+
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+//transform origin
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+//Smooth Font Text
+@mixin smooth-text () {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}

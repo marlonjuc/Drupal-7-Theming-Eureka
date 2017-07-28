@@ -1,0 +1,36 @@
+.loader{
+  display: none;
+  &.overlay{
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+  &.full-screen{
+    /* dimensions: spanning the background from edge to edge */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483647;
+    /* z-index needs to be >= elements on the site. */
+    /* position: centering content */
+    text-align: center;
+    /* insures that the ::before pseudo element doesn't force wrap with fixed width content; */
+    white-space: nowrap;
+    /* IE8 "hack" for nested featherlights */
+    width: 100%;
+    height: 100%;
+    img{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: #ffffff;
+      opacity: 0.8;
+      border-radius: 5px;
+      padding: 1%;
+    }
+  }
+}

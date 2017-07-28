@@ -1,0 +1,47 @@
+.component-c013 {
+
+    ul.faqs-list {
+        li {
+            margin-bottom: 15px;
+            display: inline-block;
+            overflow-y: hidden;
+            width: 100%;
+            a.question {
+                font-family: $graphicBlack;
+                font-size: 16px;
+                color: $eurekaSecondaryGray;
+                line-height: 24px;
+                margin-bottom: 10px;
+                span {
+                    width: 12px;
+                    height: 7px;
+                    content: " ";
+                    background: url("../img/icon-global-list-down.png") no-repeat;
+                    background-size: contain;
+                    display: inline-block;
+                    position: relative;
+                    &.expanded {
+                        @include rotate(180);
+                    }
+                }
+            }
+
+            .answer {
+                font-family: $graphicRegular;
+                font-size: 16px;
+                color: $eurekaSecondaryGray;
+                line-height: 24px;
+            }
+        }
+    }
+
+@include media(md) {
+
+}/*End MD*/
+
+@include media(lg) {
+
+}/*End LG*/
+
+
+}/*End Component C013*/

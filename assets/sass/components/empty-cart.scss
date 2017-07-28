@@ -1,0 +1,42 @@
+.empty-cart {
+    .back-link {
+        font-size: 1em;
+        color: $eurekaSecondaryGray;
+        font-family: $graphicRegular;
+        .icon {
+            color: $eurekaPrimaryGreen;
+            margin-right: 10px;
+        }
+    }
+    .title {
+        text-align: left;
+        font-size: 1.714em;
+        margin-top: 40px;
+        color: $eurekaBlack;
+    }
+    .description {
+        margin-top: 70px;
+        .sub-title, .text {
+            text-align: center;
+            color: $eurekaGray2;
+        }
+        .sub-title {
+            font-size: 1.2857em;
+        }
+        .text {
+            font-size: 1.1418em;
+        }
+        .cta {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+}
+@include media(sm){
+    .empty-cart {
+        .description {
+            margin-top: 120px;
+        }
+    }
+}
+

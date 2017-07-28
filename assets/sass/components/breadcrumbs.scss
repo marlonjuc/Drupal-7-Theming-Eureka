@@ -1,0 +1,11 @@
+.breadcrumb{
+	color: $eurekaGray2;
+	background-color: transparent;
+	padding: 5px 0;
+	font-family: $graphicRegular;
+
+	a, a:visited, a:hover, a:focus{
+		color: $eurekaGray2;
+		font-family: $graphicRegular;
+	}
+}

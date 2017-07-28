@@ -1,0 +1,101 @@
+/* GLOBAL STYLES */
+
+#formwrapper{
+    width:100%!important;
+}
+
+div.col-md-6{
+    width:100%!important;
+}
+
+.form-top-aligned div.row-fluid{
+    padding-bottom:0px;
+}
+.subitem.rowleft{
+    display: none;
+}
+#fieldcontainer6, #fieldcontainer7{
+   width: 50% !important;
+}
+input#id123-button-send {
+    background-color: #d3d0c2 !important;
+    border-radius: 99px;
+    cursor: pointer;
+    padding: 19px 10px 17px 10px !important;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    max-width: 304px;
+    width: 100%;
+    color:#4C4C4A !important;
+}
+input#id123-button-send:hover{
+    background-color: #BDD747 !important;
+    color:000!important;
+}
+.label-text{
+    font-size:12px !important;
+    color: #A5A5A4 !important;
+}
+
+.class123-checkbox .label-text {
+    font-size: 10px !important;
+    line-height: 12px !important;
+}
+
+div.big-container.user-own-css input[type="text"]{
+    -webkit-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+    border-radius: initial !important;
+    height: 45px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none !important;
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+    #formwrapper{
+    width: 500px !important;
+    margin-left:0 !important;
+    }
+    label-text{
+    font-size:14px !important;
+    }
+    div.big-container.user-own-css input[type="text"]{
+    font-size: 14px;
+    }
+    div.select2-container .select2-choice{
+        font-size:14px;
+    }
+    #fieldcontainer6, #fieldcontainer7{
+       width: 37.5% !important;
+    }
+}
+
+/* Register Product MODAL STYLES */
+#fieldcontainer7 .rowright, #fieldcontainer6 .rowright{
+    width: 100%;
+}
+div#formwrapper{
+    margin-left: 0;
+}
+div.fieldcontainer{
+    padding-left:0;
+}
+.select2-container.select2-extra{
+    -webkit-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.1);
+    height:45px;
+    padding-top:7px;
+}
+.select2-container .select2-choice{
+    border:none;
+    background:transparent;
+}
+div.select2-container .select2-choice{
+     font-size:12px;
+}

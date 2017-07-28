@@ -1,0 +1,620 @@
+.footer {
+    color: #FFF;
+    padding-top: 33px;
+    text-align: center;
+    background-color: #000;
+    ul {
+        list-style-type: none;
+    }
+    .item-list ul li{
+        margin-left: 0;
+    }
+    a {
+        color: #FFF;
+    }
+    a:hover, a:focus {
+        text-decoration: none;
+    }
+    .clear-col-padding {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .partner-menu {
+        margin-bottom: 10px;
+    }
+    .about-menu_items,
+    .partner-menu_items {
+        display: none;
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 32px;
+        padding-top: 15px;
+        letter-spacing: 0px;
+        padding-bottom: 15px;
+        background-color: #4C4C4A;
+        font-family: $graphicRegular;
+    }
+    .about-menu_items-left,
+    .partner-menu_items-left {
+        width: 130px;
+        float: right;
+        li a {
+            font-family: $graphicRegular;
+        }
+    }
+    .about-menu_items-right,
+    .partner-menu_items-right {
+        float: left;
+        width: 155px;
+        li a {
+            font-family: $graphicRegular;
+        }
+    }
+    .left-aligner_link {
+        float: right;
+        width: 125px;
+        text-align: left;
+    }
+    .left-aligner_group {
+        overflow: auto;
+    }
+    .right-aligner_link {
+        float: left;
+        padding-left: 25px;
+    }
+    .footer-menu {
+        margin-bottom: 30px;
+    }
+    .footer-menu .footer-menu__site-logo {
+        margin-bottom: 23px;
+        img {
+            width: 143px;
+            height: 32px;
+        }
+    }
+    ul.footer-social-icons {
+        padding-left: 0px;
+        margin-bottom: 36px;
+        li {
+            margin: 0px;
+            display: inline;
+            margin-right: 23px;
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+    .footer-highlighted-links {
+        padding-left: 0px;
+        margin-left: 0px;
+        font-family: $graphicBlack;
+        li a {
+            font-family: $graphicBold;
+            font-size: 12px;
+            letter-spacing: 0px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #707F2A;
+        }
+    }
+    .about-menu .dropdown-trigger__link span{
+        width: 13px;
+        height: 8px;
+        left: -30px;
+        float: right;
+        margin-top:8px;
+        position: relative;
+        background: url("../img/icon-global-list-down.png") no-repeat;
+        background-size: contain;
+    }
+    .about-menu .dropdown-trigger__link a,
+    .partner-menu .dropdown-trigger__link a {
+        font-size: 12px;
+        letter-spacing: 0px;
+        padding-bottom: 5px;
+        padding-right: 25px;
+        font-family: $graphicSemiBold;
+        border-bottom: 1px solid rgb(76, 76, 74);
+    }
+    .about-menu .dropdown-trigger__link a.active ,
+    .partner-menu .dropdown-trigger__link a.active {
+        color: white;
+        border: none;
+    }
+    .about-menu .dropdown-trigger__link a.active span,
+    .partner-menu .dropdown-trigger__link a.active span{
+        transform: rotate(180deg);
+    }
+    .about-menu ul.about-menu-menu_items {
+        display: none;
+        overflow: auto;
+        margin-top: 6px;
+        font-size: 12px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        background-color: #4C4C4A;
+    }
+    .partner-menu ul li {
+        text-align: left;
+    }
+    .partner-menu ul.partner-menu-menu {
+        padding-left: 0px;
+    }
+    .partner-menu ul.partner-menu-menu_items {
+        display: none;
+        margin-top: 6px;
+        font-size: 12px;
+        line-height: 32px;
+        padding-left: 0px;
+        letter-spacing: 0px;
+        background-color: #4C4C4A;
+    }
+    .partner-menu .dropdown-trigger__link span{
+        width: 13px;
+        height: 8px;
+        left: -15px;
+        float: right;
+        margin-top:8px;
+        position: relative;
+        background: url("../img/icon-global-list-down.png") no-repeat;
+        background-size: contain;
+    }
+    .secondary-jo-brands-menu {
+        padding-bottom: 10px;
+    }
+    .secondary-jo-brands-menu-logo {
+        margin-bottom: 6px;
+        margin-top: 36px;
+        .dropdown-arrow {
+            width: 13px;
+            height: 8px;
+            margin: auto;
+            display: block;
+            margin-top: 5px;
+            background: url("../img/icon-global-list-down.png") no-repeat;
+            background-size: contain;
+        }
+        a.footer-dropdown-trigger__logo:first-child{
+            width: 100px;
+            margin: auto;
+            display: block;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgb(76, 76, 74);
+        }
+        a.footer-dropdown-trigger__logo:first-child.open{
+            border: none;
+        }
+        a.footer-dropdown-trigger__logo img {
+            width: 74px;
+            height: 24px;
+        }
+    }
+    .secondary-jo-brands-menu__motto {
+        display: none;
+    }
+    .secondary-jo-brands-menu__left {
+        overflow: auto;
+        ul {
+            float: right;
+            li {
+                width: 120px;
+                text-align: left;
+            }
+        }
+    }
+    .secondary-jo-brands-menu__right {
+        overflow: auto;
+        padding-left: 40px;
+        ul {
+            float: left;
+            li {
+                text-align: left;
+            }
+        }
+    }
+    .secondary-jo-brands-menu .footer-dropdown-trigger__img {
+        width: 74px;
+        height: 28px;
+    }
+    .secondary-jo-brands-menu ul.secondary-jo-brands-menu-menu {
+        font-size: 12px;
+        line-height: 32px;
+        background-color: #4C4C4A;
+        padding-left: 0px;
+    }
+    .secondary-jo-brands-menu ul.secondary-jo-brands-menu-menu__items {
+        display: none;
+        margin-top: 6px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .secondary-jo-brands-menu ul.secondary-jo-brands-menu-menu span.secondary-jo-brands-menu-menu__title {
+        display: none;
+    }
+    .secondary-jo-brands-menu .secondary-jo__wrapper {
+        display: none;
+        margin-top: 6px;
+        font-size: 12px;
+        padding-top: 20px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        padding-bottom: 20px;
+        background-color: #4C4C4A;
+        font-family: $graphicLight;
+    }
+    .secondary-jo-brands-menu .secondary-jo-brands-menu_left ul {
+        width: 120px;
+        float: right;
+    }
+    .secondary-jo-brands-menu .secondary-jo-brands-menu_left ul span,
+    .secondary-jo-brands-menu .secondary-jo-brands-menu_right ul span {
+        display: none;
+    }
+    .secondary-jo-brands-menu .secondary-jo-brands-menu_left li,
+    .secondary-jo-brands-menu .secondary-jo-brands-menu_right li {
+        display: none;
+    }
+    .secondary-jo-brands-menu .secondary-jo-brands-menu_left a,
+    .secondary-jo-brands-menu .secondary-jo-brands-menu_right a {
+        display: block;
+    }
+    .secondary-jo-brands-menu .secondary-jo-brands-menu_left a {
+        float: right;
+        width: 120px;
+        text-align: left;
+        font-family: $graphicRegular;
+    }
+    .secondary-jo-brands-menu .secondary-jo-brands-menu_right a {
+        display: block;
+        text-align: left;
+        padding-left: 40px;
+        font-family: $graphicRegular;
+    }
+    .legal-menu {
+        color: #FFF;
+        font-size: 10px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        margin-top: 25px;
+        margin-bottom: 26px;
+        font-family: $graphicRegular;
+        p {
+            font-size: 10px;
+        }
+        .item-list ul span {
+            margin: 0px 10px;
+            &:last-child {
+                display: none;
+            }
+        }
+        ul.legal-menu-menu {
+            padding-left: 0px;
+        }
+        ul li {
+            display: inline;
+            a {
+                font-family: $graphicRegular;
+            }
+        }
+        .legal-menu-separator {
+            display: none;
+        }
+    }
+    .open a img.dropdown-arrow {
+        transform: rotate(180deg);
+    }
+    .rotate-img {
+        transform: rotate(180deg);
+    }
+
+    @include media(sm){
+        .left-aligner_link {
+            width: 170px;
+        }
+        .about-menu .dropdown-trigger__link span {
+            left: -70px;
+        }
+        .right-aligner_link {
+            text-align: left;
+            padding-left: 80px;
+        }
+        .about-menu_items-right,
+        .partner-menu_items-right {
+            width: 250px;
+        }
+        .about-menu ul.about-menu-menu_items .left-aligner_link {
+            margin-right: 0px;
+        }
+        .secondary-jo-brands-menu__left {
+            margin-right: 40px;
+        }
+        .secondary-jo-brands-menu__right {
+            padding-left: 100px;
+        }
+        .secondary-jo-brands-menu .secondary-jo-brands-menu_left ul {
+            margin-right: 40px;
+        }
+        .secondary-jo-brands-menu .secondary-jo-brands-menu_right ul {
+            margin-left: 60px;
+        }
+        .secondary-jo-brands-menu-logo a.footer-dropdown-trigger__logo img {
+            width: 90px;
+            height: 34px;
+        }
+        .legal-menu p {
+            display: inline;
+        }
+    }
+
+    @include media(md){
+
+        text-align: left;
+        padding-top: 44px;
+
+        .row {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        img.dropdown-arrow {
+            display: none;
+        }
+        .left-aligner_link {
+            margin-right: 0px;
+        }
+        .right-aligner_link {
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+        .footer-menu {
+            /*right: -15px;*/
+        }
+        .partner-menu {
+            margin-bottom: 0px;
+        }
+        .footer-menu .footer-menu__site-logo {
+            margin-bottom: 46px;
+        }
+        .footer-menu ul.footer-social-icons {
+            margin-bottom: 27px;
+        }
+        .footer-highlighted-links li {
+            margin-bottom: 27px;
+        }
+        .footer-highlighted-links li a {
+            font-size: 14px;
+        }
+        .footer-highlighted-links .left-aligner_link {
+            float: left;
+            width: auto;
+        }
+        .about-menu .dropdown-trigger__link {
+            width: 100%;
+            display: block;
+            font-size: 14px;
+            font-family: $graphicBlack;
+        }
+        .about-menu ul.about-menu-menu {
+            width: 250px;
+            float: left;
+            padding-left: 60px;
+        }
+        .about-menu ul.about-menu-menu_items {
+            width: 100%;
+            display: block;
+            font-size: 14px;
+            background-color: inherit;
+            font-family: $graphicRegular;
+            li {
+                line-height: 28px;
+                a {
+                    font-family: $graphicRegular;
+                }
+            }
+        }
+        .about-menu .dropdown-trigger__link a,
+        .partner-menu .dropdown-trigger__link a {
+            color: #FFF;
+            border: none;
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: 0px;
+            font-family: $graphicBlack;
+        }
+        .about-menu .dropdown-trigger__link span,
+        .partner-menu .dropdown-trigger__link span,
+        .secondary-jo-brands-menu-logo .dropdown-arrow {
+            display: none;
+        }
+        .partner-menu .dropdown-trigger__link {
+            font-size: 14px;
+            font-family: $graphicBlack;
+        }
+        .secondary-jo-brands-menu {
+            margin-top: 0px;
+            border-left: 1px solid #272726;
+            padding-left: 60px !important;
+        }
+        .secondary-jo-brands-menu__motto {
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 0px;
+            line-height: 22px;
+            font-family: Graphik-Light;
+        }
+        .secondary-jo-brands-menu__right-panel {
+            margin-top: -30px;
+        }
+        a.footer-dropdown-trigger__logo {
+            display: block;
+            text-align: left;
+            margin-bottom: 28px;
+        }
+        .secondary-jo-brands-menu a.footer-dropdown-trigger__logo {
+            display: block !important;
+        }
+        .secondary-jo-brands-menu .footer-dropdown-trigger__img {
+            width: 145px;
+            height: 55px;
+        }
+        .secondary-jo-brands-menu ul.secondary-jo-brands-menu-menu {
+            float: left;
+            background-color: inherit;
+        }
+        .secondary-jo-brands-menu ul.secondary-jo-brands-menu-menu__items {
+            display: block;
+            background-color: inherit;
+        }
+        .secondary-jo-brands-menu ul.secondary-jo-brands-menu-menu span.secondary-jo-brands-menu-menu__title {
+            display: block;
+        }
+        .secondary-jo-brands-menu ul.secondary-jo-brands-menu-menu li {
+            display: inline;
+        }
+        .secondary-jo-brands-menu-logo a.footer-dropdown-trigger__logo img {
+            height: 55px;
+            width: 145px;
+        }
+        .secondary-jo-brands-menu .secondary-jo-brands-menu-logo a img.dropdown-arrow {
+            display: none;
+        }
+        .secondary-jo-brands-menu .secondary-jo__wrapper {
+            display: block;
+            padding-top: 0px;
+            background-color: inherit;
+        }
+        .secondary-jo-brands-menu .secondary-jo-brands-menu_left ul {
+            float: left;
+            width: auto;
+            margin-right: 0px;
+            padding-right: 20px;
+        }
+        .secondary-jo-brands-menu .secondary-jo-brands-menu_right {
+            padding-right: 5px;
+        }
+        .secondary-jo-brands-menu .secondary-jo-brands-menu_right ul {
+            margin-left: 0px;
+        }
+        .secondary-jo-brands-menu .secondary-jo-brands-menu_left ul span,
+        .secondary-jo-brands-menu .secondary-jo-brands-menu_right ul span {
+            display: block;
+        }
+        .secondary-jo-brands-menu .secondary-jo-brands-menu_left li,
+        .secondary-jo-brands-menu .secondary-jo-brands-menu_right li {
+            width: 100%;
+            display: block;
+            overflow: auto;
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: 0px;
+            font-family: $graphicSemiBold;
+        }
+        .secondary-jo-brands-menu .secondary-jo-brands-menu_left a,
+        .secondary-jo-brands-menu .secondary-jo-brands-menu_right a {
+            float: left;
+            width: auto;
+            display: inline;
+            font-size: 14px;
+            font-family: $graphicLight;
+        }
+        .secondary-jo-brands-menu .secondary-jo-brands-menu_right a {
+            padding-left: 0px;
+        }
+        .secondary-jo-brands-menu-logo a.footer-dropdown-trigger__logo:first-child{
+            width: auto;
+            border: none;
+            margin-bottom: 30px;
+        }
+        .partner-menu ul.partner-menu-menu {
+            /*margin-top: -5px;*/
+
+            width: 150px;
+            float: left;
+        }
+        .partner-menu ul.partner-menu-menu_items {
+            display: inline;
+            font-size: 14px;
+            background-color: inherit;
+            font-family: $graphicRegular;
+        }
+        .partner-menu ul.partner-menu-menu_items li {
+            width: 100%;
+            line-height: 28px;
+            display: inline-block;
+            a {
+                font-family: $graphicRegular;
+            }
+        }
+        .legal-menu {
+            text-align: left;
+            font-size: 12px;
+            padding-left: 0;
+            margin-top: 5px;
+        }
+        .legal-menu p {
+            font-size: 12px;
+        }
+        .legal-menu,
+        .legal-menu .item-list,
+        .legal-menu .item-list ul,
+        .legal-menu .item-list ul li {
+            display: inline;
+        }
+        .legal-menu ul.legal-menu-menu {
+            display: inline;
+        }
+        .legal-menu .item-list ul span {
+            display: inline;
+        }
+        .legal-menu .legal-menu-separator {
+            display: inline;
+        }
+        .legal-menu .item-list ul span:last-child {
+            display: inline;
+        }
+        .col-md-20 {
+            width: 20%;
+            float: left;
+            min-height: 1px;
+            padding-left: 0px;
+            padding-right: 0px;
+            position: relative;
+        }
+        .col-md-links {
+            width: 18%;
+            /*ul.about-menu-menu {
+                padding-left: 50px;
+            }*/
+        }
+        .col-md-40 {
+            width: 40%;
+            float: left;
+            min-height: 1px;
+            padding-left: 0px;
+            padding-right: 0px;
+            position: relative;
+        }
+        .col-md-johnson-links {
+            width: 46%;
+            /*&.secondary-jo-brands-menu {
+                padding-left: 40px !important;
+                .secondary-jo-brands-menu_right {
+                    padding-right: 0;
+                }
+            }*/
+        }
+        .secondary-jo-brands-menu-logo {
+            margin-top: 0;
+        }
+        .col-md-100 {
+            width: 100%;
+            float: left;
+            min-height: 1px;
+            padding-left: 0px;
+            padding-right: 0px;
+            position: relative;
+        }
+    }
+}
+

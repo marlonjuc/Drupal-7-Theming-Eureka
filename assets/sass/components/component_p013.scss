@@ -1,0 +1,149 @@
+.add-to-cart--summary {
+
+    background: #000;
+    color: #FFF;
+    max-width: 720px;
+    //margin: 0 -15px;
+
+    .summary-box{
+        padding: 35px 5px;
+    }
+
+    .headline{
+        margin-bottom: 35px;
+    }
+
+    .items-list > li{
+        overflow: hidden;
+        margin-bottom: 22px;
+
+        .number{
+            float:right;
+            width: 25%;
+            text-align: right;
+        }
+    }
+
+    .detail-box{
+        display: none;
+        clear: both;
+        margin-top: 16px;
+        .open{
+            display: block;
+        }
+        input{
+            width: 57%;
+            max-width: 175px;
+            height: 45px;
+            line-height: 45px;
+            color: black;
+            text-align: center;
+        }
+        .error{
+            color: red;
+            margin: 5px 0 0;
+        }
+    }
+    
+    .estimated_shipping{
+        font-size: 12px;
+        line-height: 14px;
+        margin: 5px 0;
+    }
+
+    .brand-list > li{
+        clear: both;
+        padding: 18px 0;
+        border-bottom:1px solid #4c4c4a;
+        .total{
+            float: right;
+        }
+    }
+
+    .update_cart_detail{
+        float: right;
+        line-height: 45px;
+        font-family: $graphicBlack;
+        color: $eurekaPrimaryGreen;
+    }
+
+    .button.paypal{
+        font-size: 13px;
+    }
+
+    .h7{
+        float: left;
+        font-size: 14px;
+        max-width: 75%;
+        padding-right: 24px;
+        position: relative;
+        width: auto;
+        .mobile {
+            display: block;
+        }
+    }
+
+    .h7.plus{
+        cursor:pointer;
+    }
+
+    .h7.plus:after {
+        @extend .icon-icon-plus:before;
+        display: inline-block;
+        font-family: 'aureka' !important;
+        color: #BDD747;        
+        transform: rotate(0deg);
+        transition: transform .5s;
+        margin-left: 10px;
+        font-size: 13px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .h7.plus.open:after {
+        transform: rotate(45deg);
+    }
+
+    
+    @include media(sm) {
+
+        margin: 0 auto;
+        float: none;
+
+        .items-list > li{
+            margin-bottom: 32px;
+        }
+
+        .button.paypal{
+            font-size: 1.8rem;
+        }
+
+        .h7{
+            display: block;
+            font-size: 14px;
+            .mobile {
+                display: none;
+            }
+        }
+
+        .h7.plus:after {
+            font-size: inherit;
+        }
+        
+
+    }
+
+    @include media(md) {
+        .summary-box{
+            padding: 35px 15px;
+        }
+    }
+
+    @include media(lg) {
+        .h7{
+            display: inline;
+        }
+    }
+
+}

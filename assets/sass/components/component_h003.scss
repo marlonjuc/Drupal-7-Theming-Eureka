@@ -1,0 +1,49 @@
+.component-h003 {
+    position: relative;
+    .plp-hero-img-container {
+        padding-bottom: 60.42%;
+        display: block;
+        .plp-hero-image {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    
+    .plp-hero-image {
+        img {
+            width: 100%;
+        }
+    }
+    .plp-hero-text {
+        position: absolute;
+        color: $eurekaWhite;
+        font-size: 3em;
+        text-align: center;
+        left: 50%;
+        margin: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@include media(sm) {
+    .component-h003 {
+        .plp-hero-img-container {
+            padding-bottom: 28.20%;
+        }
+    }
+}
+@include media(xlg) {
+    .component-h003 {
+        max-height: 405px;
+        overflow: hidden;
+        .plp-hero-text {
+            font-size: 3.125em;
+        }
+    }
+}

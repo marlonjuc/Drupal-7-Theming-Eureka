@@ -1,0 +1,58 @@
+.component-c007 {
+    background: rgba(255, 255, 255, 0.5);
+    .title {
+        font-size: 1.2857em;
+    }
+    ul.menu {
+        list-style: none;
+        li.leaf {
+            list-style: none;
+            margin-left: 0;
+            margin-bottom: 5px;
+            a {
+                font-size: 1em;
+                text-decoration: underline;
+                font-family: $graphicRegular;
+                color: $eurekaSecondaryGray;
+            }
+        }
+    }
+    p {
+        margin-bottom: 30px;
+    }
+    .help-contact {
+        font-size: 0.875em;
+        font-family: $graphicRegular;
+        color: $eurekaSecondaryGray;
+        .contact-icons {
+            position: relative;
+        }
+        .icon-phone-icon {
+            top: 11px;
+            font-size: 2em;
+            margin-right: 20px;
+        }
+        .icon-email-icon {
+            top: 5px;
+            font-size: 1.5em;
+            margin-right: 14px;
+        }
+        .icon-question-mark {
+            font-size: 2em;
+            margin-right: 20px;
+            top: 7px;
+        }
+    }
+}
+@include media(sm){
+    .component-c007 {
+        max-width: 720px;
+        margin: 0 auto;
+        padding-left: 2%;
+    }
+}
+@include media(md){
+    .component-c007 {
+        padding-left: 55px;
+    }
+}

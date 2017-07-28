@@ -1,0 +1,154 @@
+
+/* Note: This component is using desktop first approach.
+  This needs to be updated to mobile first when there is some free time
+*/
+
+.product {
+    width: 100%;
+}
+
+.pdp-carousel-wrapper {
+    float: left;
+    // margin-top: 90px;
+    overflow: hidden;
+    position: relative;
+}
+
+.pdp-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 36px;
+    margin-top: 32px;
+    max-width: 1440px;
+    margin-bottom: 50px;
+}
+
+.pdp-social-bar {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    margin-top: 36px;
+    margin-top: 32px;
+}
+
+.pdp-social-icons {
+    float: right;
+    margin-right: 68px;
+}
+
+.pinterest-btn {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    display: inline-block;
+    background: url("../img/icon-pdp-pinterest.png");
+    background-size: contain;
+}
+
+.twitter-btn {
+    width: 19px;
+    height: 17px;
+    cursor: pointer;
+    margin-left: 22px;
+    display: inline-block;
+    background: url("../img/icon-pdp-twitter.png");
+    background-size: contain;
+}
+
+.facebook-btn {
+    width: 9px;
+    height: 18px;
+    cursor: pointer;
+    margin-left: 26px;
+    display: inline-block;
+    background: url("../img/icon-pdp-facebook.png");
+    background-size: contain;
+}
+
+.pdp-description {
+    clear: both;
+    padding-left: 40%;
+    position: relative;
+}
+
+/*
+*  Tabs Techinical Specifications -
+*/
+.pdp-technical-specifications {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+/*
+* Video Player
+*/
+
+.pdp-videos {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.pdp-banner {
+  margin-bottom: 5px;
+  @include media(md){
+    margin-bottom: 15px;
+  }
+}
+
+.pdp-ctas {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    margin-bottom: 80px;
+}
+
+.pdp-reviews {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pdp-accessories {
+    margin: 0 auto;
+}
+
+.pdp-related-products {
+    margin: 0 auto;
+}
+
+
+/*
+*   hidden don't needed outputs
+*/
+
+.pdp-dates {
+    display: none;
+}
+
+.pdp-links {
+    display: none;
+}
+
+.pdp-empty {
+    display: none;
+}
+
+.pdp-dont-used {
+    display: none;
+}
+
+.pdp-bullets {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .twitter-btn {
+        margin-left: 10px;
+    }
+
+    .facebook-btn {
+        margin-left: 10px;
+    }
+}
+@include media(sm) {
+}

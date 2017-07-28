@@ -1,0 +1,23 @@
+.free-shipping-block {
+    .title {
+        font-size: 1.2857em;
+    }
+    p {
+        margin-bottom: 30px;
+        font-size: 1em;
+        color: $eurekaSecondaryGray;
+        a {
+        	color: $eurekaSecondaryGray;
+        	font-family: $graphicBlack;
+        }
+    }
+}
+@include media(md){
+    .free-shipping-block {
+    	margin-top: 50px;
+    	.free-shipping-content {
+    		padding-left: 55px;
+    	}
+    }
+}
+

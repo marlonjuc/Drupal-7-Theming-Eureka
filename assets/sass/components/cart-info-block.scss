@@ -1,0 +1,22 @@
+.add-to-cart-info-blocks {
+    .info-block {
+        padding: 0;
+    }
+}
+@include media(sm){
+    .add-to-cart-info-blocks {
+        margin: 0 auto;
+        max-width: 720px;
+        float: none;
+        .info-block {
+            padding-left: 50px;
+        }
+    }
+}
+@include media(md){
+    .add-to-cart-info-blocks {
+        .info-block {
+            padding-left: 15px;
+        }
+    }
+}

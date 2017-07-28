@@ -1,0 +1,158 @@
+.view-component-p008 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 126px;
+    position: relative;
+
+    .desktop-p008{
+        display: none;
+    }
+
+    .slick-slide{
+        outline: none;
+    }
+
+    h2 {
+        color: $eurekaBlack;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+
+    .related-products {
+
+        ul.slides {
+            opacity: 0;
+            margin-bottom: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            li.slick-slide {
+                top: 15px;
+                margin-bottom: 30px;
+                height: 100%;
+                display: flex;
+            }
+            .col-xs-12 {
+                padding-left: 0;
+            }
+        }
+
+        .slick-next,
+        .slick-prev, .slick-dots {
+            display: none !important;
+        }
+
+        .product-tile {
+            flex: 1 0 auto;
+            .label-header {
+                display: none;
+            }
+            form input[type="submit"] {
+                background-image: url("../img/icon-global-button-arrow-grey.png");
+                background-repeat: no-repeat;
+                background-size: 55% auto;
+                background-position: center center;
+            }
+            .date {
+                display: none !important;
+            }
+        }
+
+    }
+
+    .gradient-right {
+        background: linear-gradient(to right,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+        top: 0;
+        right: 0;
+        width: 15%;
+        min-height: 410px;
+        display: block;
+        position: absolute;
+    }
+
+
+    @include media(md) {
+        margin-bottom: 68px;
+        .related-products {
+            .last{
+                display: none;
+            }
+
+            ul.slides {
+                display: none;
+                li.slick-slide {
+                    .product-tile {
+                    }
+                }
+                .col-xs-12 {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            .desktop-p008{
+                display: block;
+                margin-top: 20px;
+
+                .first {
+                    width: 50%;
+                    padding-right: 0;
+                    padding-top: 4%;
+                    .product-tile {
+                        max-width: 100%;
+                        > div {
+                            max-width: 100%;
+                            .image-thumb {
+                                height: 330px;
+                                img {
+                                    height: 330px;
+                                    max-height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .second {
+                    width: 50%;
+                    margin-top: -100px;
+                    .product-tile {
+                        float: left;
+                        width: 49%;
+                        min-height: 300px;
+                        margin-bottom: 15px;
+                        > div {
+                            padding-top: 26px;
+                        }
+                    }
+                    .product-tile:nth-child(odd) {
+                        margin-right: 1%;
+                        margin-bottom: 2%;
+                    }
+                    .product-tile:nth-child(even) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .gradient-right {
+            display: none;
+        }
+    }
+
+
+    @include media(sm) {
+        margin-bottom: 70px;
+        h2 {
+            line-height: 54px;
+        }
+        .related-products {
+            ul.slides {
+                li.slick-slide {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+}/*End .view-component-p008*/

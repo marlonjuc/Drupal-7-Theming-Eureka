@@ -1,0 +1,51 @@
+.component-s001 {
+    margin-bottom: -13px;
+    .promo-banner {
+        width: 100%;
+        height: 64px;
+        display: none;
+        background: url("../img/pdp-sales-bannerv2.png");
+        h2 {
+            color: #4C4C4A;
+            font-size: 18px;
+            line-height: 66px;
+            text-align: center;
+            font-family: $graphicRegular;
+            margin-top: 0; 
+        }
+    }
+
+    .promo-banner-wrapper.animate {
+        .promo-banner {
+            display: block;
+            background-repeat: repeat-x;
+        }
+    }
+
+    .promo-banner {
+        animation-delay: 0s;
+        animation-duration: 500ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+        animation-timing-function: linear;
+        animation-name: pdp-sales-banner-anim;
+        h2 {
+            animation-delay: 700ms;
+            animation-duration: 500ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: backwards;
+            animation-timing-function: linear;
+            animation-name: pdp-sales-banner-h2-anim;
+            text-transform: none;
+            &:hover {
+                color: $eurekaBlack;
+            }
+        }
+    }
+
+    @include media(sm) {
+        .promo-banner h2 {
+            font-family: $graphicBlack;
+        }
+    }
+}

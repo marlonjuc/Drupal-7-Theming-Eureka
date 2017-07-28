@@ -1,0 +1,233 @@
+.show-more-cta {
+  border-top: 2px solid #EEEDEF;
+  margin-top: 40px;
+  padding: 0 !important;
+  a {
+    &.show-link {
+      font-family: $graphicBold;
+      font-size: 16px;
+      color: #4C4C4A;
+      width: 156px;
+      height: 40px;
+      position: relative;
+      top: -11px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: $eurekaWhite;
+      transition: top .5s;
+      border-radius: 0;
+      padding: 0;
+      border: none;
+      &:hover {
+        color: $eurekaPrimaryGreen;
+        top: -20px;
+        transition: top .5s;
+        background-color: transparent;
+      }
+      &.hidden {
+        display: none;
+      }
+       &.progress-disabled {
+         background-color: transparent;
+       }
+    }
+    &:after{
+       content:'';
+        background: url("../img/icon-global-list-down.png") no-repeat;
+        width: 18px;
+        height: 12px;
+        background-size: contain;
+        display: block;
+        margin: 0 auto;
+        margin-top: 6px;
+    }
+    &.open {
+        &:after {
+          background: url("../img/icon-global-list-up.png") no-repeat;
+          width: 18px;
+          height: 12px;
+          background-size: contain;
+        }
+      }
+  }
+}
+
+
+
+/**
+  Checkbox
+**/
+$checkbox_border_color : #EEEDEF;
+$checkbox_border_color_hover: #7D7D7D;
+.check-box {
+  position: relative;
+  input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    &:checked {
+      + .mask {
+        background-image: url('../img/icon-check.png');
+        background-size: 15px 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &:before {
+          display: block;
+          text-align: center;
+          height: 100%;
+          vertical-align: middle;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .mask {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $eurekaWhite;
+    border: 1px solid $checkbox_border_color;
+    box-shadow: inset 0px 1px 15px 0px rgba(0,0,0,0.10);
+    border-radius: 2px;
+  }
+  label{
+    text-align: left;
+    width: 100%;
+    margin-left: 30px;
+    color: $eurekaGray3;
+    font-family: $graphicRegular;
+    font-weight: normal;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  &.readonly{
+    label{
+      opacity: 0.6;
+    }
+  }
+}
+
+/*
+*   CTA Button Download PDF Icon Used in banners
+*/
+
+a.button-download {
+    font-family:'Graphik-Black', Arial, sans-serif;
+    font-size: 18px;
+    color: #4C4C4A;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+}
+
+a.button-download::after {
+    content: "";
+    background: url("../img/icon-global-button-download-green.png") no-repeat;
+    width: 19px;
+    height: 12px;
+    background-size: contain;
+    display: inline-block;
+    margin-left: 4px;
+
+}
+
+
+/*
+*   Quantity Component - Selectric Styles
+*/
+
+.selectric {
+    width: 100px;
+    height: 28px;
+    float: right;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #FFF;
+    border-bottom: 2px solid #BDD747;
+    .label {
+        height: 28px;
+        border: none;
+        line-height: 28px;
+        margin-right: 22px;
+        margin-left: 0px;
+        padding-left: 0;
+        text-align: left;
+    }
+    .button {
+        height: 26px;
+        width: 13px;
+        margin-right: 0px;
+        margin-top: 2px;
+        padding-top: 0px;
+    }
+    .button .arrow {
+        width: 13px;
+        height: 8px;
+        float: right;
+        display: block;
+        margin-top: 10px;
+        background: url("../img/icon-global-list-down.png") no-repeat;
+        background-size: contain;
+    }
+    .button:after {
+        display: none;
+    }
+}
+
+.selectric-open .selectric {
+    border-bottom: 2px solid #BDD747;
+    box-shadow: 0px 0px 5px 2px rgba(151,151,151,0.5);
+}
+
+.selectric-hover .selectric, .selectric-focus .selectric{
+    border-bottom: 2px solid #BDD747;
+}
+
+.selectric-items {
+    border: 2px solid #FFF;
+    box-shadow: 0px 0px 5px 2px rgba(151,151,151,0.5);
+    li {
+        width: 25%;
+        color: #000;
+        float: left;
+        font-size: 24px;
+        text-align: center;
+        border: 2px solid #FFF;
+        background-color: #EEE;
+        font-family: $graphicRegular;
+        &:hover {
+            box-shadow:inset 0px 0px 0px 4px #BCD647;
+        }
+        &.selected {
+            background-color: #BCD647;
+        }
+    }
+}
+
+.selectric-open .button .arrow {
+    float: right;
+    width: 13px;
+    height: 8px;
+    display: block;
+    margin-top: 10px;
+    background: url("../img/icon-global-list-down.png") no-repeat;
+    background-size: contain;
+}
+
+.selectric-items {
+    margin-top: 28px;
+    width: 268px;
+    min-width: 140px;
+}

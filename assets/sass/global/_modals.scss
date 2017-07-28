@@ -1,0 +1,175 @@
+$modal-login-text-color: #A5A5A4;
+
+.default-modal{
+	z-index: 99999;
+	.modal-dialog{
+		margin: 0;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    .modal-content{
+			height: 100%;
+			border-radius: 0;
+			border: none;
+	    .modal-header{
+	    	border:none;
+	    	.close{
+	    		color:#4D4D55;
+	    		opacity: 1;
+	    		font-size: rem(27);
+					margin-top: -10px;
+					margin-right: 5px;
+	    	}
+	    }
+			.modal-body{
+				display: flex;
+				text-align: center;
+				flex-direction: column;
+				height: 100%;
+			}
+			.logo{
+				display: block;
+				margin: 10px auto 30px auto;
+			}
+			.title{
+				font-family:'Graphik-Black';
+				font-size: rem(30);
+				color: $eurekaBlack;
+				letter-spacing: -0.41px;
+				line-height: percentage(36/30);
+				text-align: center;
+				span{
+					display: block;
+				}
+			}
+			.description{
+				margin: 35px auto;
+				font-family:'Graphik-Regular';
+				font-size: rem(14);
+				color: $modal-login-text-color;
+				line-height: percentage(24/14);
+				span{
+					display: block;
+				}
+			}
+
+			.icons{
+				margin-bottom: 30px;
+				.social-icon{
+					background: url('../img/social_icons/social-icons-login.png');
+					width: 38px;
+					height: 37px;
+					margin: auto;
+					&.icon-fb{
+						background-position: 0 0;
+					}
+					&.icon-google{
+						background-position: 38px 0px;
+					}
+					&.icon-amazon{
+						background-position: 135px 0;
+					}
+				}
+			}
+			
+			.keep-me-in{
+				font-family:'Graphik-Regular';
+				font-size: rem(14);
+				color: $modal-login-text-color;
+				line-height: percentage(14/14);
+				margin:0 auto;
+			}
+
+
+
+			.disclaimers{
+				margin-top: auto;
+				margin-bottom: 80px;
+	    	.disclaimer{
+					font-family:'Graphik-Regular';
+					font-size: rem(10);
+					color: $modal-login-text-color;
+					line-height: percentage(20/10);
+					text-align: center;
+					span{
+						display: block;
+					}
+					a{
+						font-family:'Graphik-Regular';
+						font-size: rem(10);
+						color: $modal-login-text-color;
+						text-decoration: underline;
+					}
+				}
+			}
+			
+    }
+	}
+	@include media(sm){
+		.modal-dialog{
+	    min-width: 732.5px;
+	    width: 732.5px;
+	    margin: 100px auto 30px auto;
+	    position: relative;
+	    height: auto;
+	    .modal-body{
+	    	padding-bottom: 47px;
+	    }
+	    .modal-content{
+	    	.title{
+					font-size: rem(40);
+	    	}
+	    	.disclaimers{
+	    		margin:50px 0 auto;
+	    	}
+	    	.icons{
+					.social-icon{
+						background: url('../img/social_icons/social-icons-login-tablet.png');
+						width: 47px;
+						height: 47px;
+						&.icon-fb{
+							background-position: 0 0;
+						}
+						&.icon-google{
+							background-position: 166px 0px;
+						}
+						&.icon-amazon{
+							background-position: 47px 0;
+						}
+					}
+				}
+				.disclaimers{
+		    	.disclaimer{
+						span{
+							display: inline;
+						}
+					}
+				}
+	    }
+		}
+	}
+	@include media(md){
+		.modal-dialog{
+	    min-width: 876px;
+      width: 85%;
+	    margin: 130px auto 30px auto;
+	  }
+	}
+}
+
+
+@include media(md) {
+	
+	#newsletter-modal .modal-dialog {
+		max-width: 850px;	
+	}
+
+}
+
+#newsletter-modal{
+	.modal-body{
+		display: block;
+		overflow-y: auto;
+		max-height: 635px;
+	}
+} 

@@ -1,0 +1,150 @@
+
+$image-thumb-height: 230px;
+$image-thumb-height-md: 170px;
+$image-thumb-height-sm: 130px;
+
+.pdp-controls {
+    .tabs {
+        width: 100%;
+        .item-list {
+            ul.search-api-sorts {
+                li {
+                    float: left;
+                }
+            }
+        }
+        .ux-container {
+        }
+    }
+}
+
+/*Global Product Style Serving PLP Version*/
+
+.view-plp {
+    .view-content {
+        display: flex;
+        flex-wrap: wrap;
+        .views-row {
+            display: flex;
+            .product-tile {
+                float: left;
+                max-width: 100%;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                width: 100%;
+                flex: 1 0 auto;
+                opacity: 0;
+                transform: scale(0.6, 0.6);
+                > div {
+                    padding-top: 24px;
+                    max-width: 100%;
+                    padding-left: #{fluid-percentage(293px, 18px)};
+                    padding-right: #{fluid-percentage(293px, 18px)};
+                    .image-thumb {
+                        height: $image-thumb-height;
+                        margin-bottom: 0;
+                        a {
+                            display: none;
+                            &:first-child {
+                                display: block;
+                            }
+                        }
+                        img {
+                            max-height: $image-thumb-height;
+                        }
+                    }
+                    .rating-stars {
+                        /*margin-bottom: 10px;*/
+                    }
+
+                    .colors {
+                        button {
+                            display: none;
+                        }
+                    }
+                    .compare-check-box {
+                        display: block;
+                    }
+                }
+                &.onload {
+                    opacity: 1;
+                    @include scale(1);
+                    transition: all 300ms ease-in;
+                }
+            }
+        }
+        /*TODO, once promotional product price done, validates if Offer Tag and New Tag are present
+        * display just offer tag
+        */
+        .views-row-first {
+            .product-tile {
+                .offer {
+                    display: block;
+                }
+                .date {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    @include media(md) {
+        .view-content {
+            .views-row {
+                .product-tile {
+                    height: 380px;
+                    > div {
+                        .rating-stars, .colors, .compare-check-box, .compare-now-link {
+                            transition: all 300ms ease-in;
+                        }
+                        .image-thumb {
+                            height: $image-thumb-height-md;
+                            img{
+                                max-height: $image-thumb-height-md;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }/*End MD*/
+
+    @include media(sm) {
+        .view-content {
+            .views-row {
+                .product-tile {
+                    height: auto;
+                    > div {
+                        .image-thumb {
+                            height: $image-thumb-height-sm;
+                            img{
+                                max-height: $image-thumb-height-sm;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }/*End SM*/
+
+}/*End .view-plp*/
+
+
+/*TODO: Move this custom wrapper to its own component.scss if necesarry*/
+
+.view-search-l003 {
+    .view-content {
+        display: flex;
+        flex-wrap: wrap;
+        .views-row {
+            display: flex;
+            .product-tile {
+                > div {
+                    .colors {
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}/*End .view-search*/

@@ -1,0 +1,113 @@
+.p005-container {
+  .tab-button {
+    text-align: center;
+    margin-bottom: 18px;
+    padding: 0;
+    .title-tab {
+      font-family: $graphicBold;
+      font-size: rem(24);
+      color: $eurekaBeige;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-block;
+      &.active {
+        color: $eurekaDarkGray;
+      }
+    }
+  }
+  .separator {
+    height: 4px;
+    background-color: #EEEEEE;
+    padding: 0;
+  }
+  .separator-active {
+    height: 100%;
+    width: 50%;
+    background-color: $eurekaPrimaryGreen;
+    left: 0;
+    position: relative;
+  }
+
+  .tab-content {
+    margin-top: 45px;
+    padding: 0 15px;
+
+    .attributes-table {
+      font-size: rem(18);
+      color: $eurekaBlack;
+      width: 100%;
+      line-height: 28px;
+
+      tr {
+        border-top: 2px solid $eurekaGray4;
+        &:first-child {
+          border-top: none;
+        }
+        &.hidden-row {
+          display: none;
+        }
+      }
+      .attr-name {
+        font-family: $graphicSemiBold;
+      }
+      .attr-value {
+        font-family: $graphicRegular;
+        color: #4C4C4C;
+        text-align: right;
+      }
+    }
+  }
+  .tab-image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .details-container {
+    .tab-content {
+      .attributes-table {
+        float: right;
+      }
+    }
+    .tab-image{
+      padding-right: 0;
+    }
+  }
+
+  .materials-container {
+    display: none;
+    .tab-content {
+      float: right;
+      .attributes-table {
+        float: left;
+      }
+    }
+    .tab-image{
+      padding-left: 0;
+    }
+  }
+
+  //TODO: this should be global
+
+
+  @include media(sm){
+    .tab-button .title-tab {
+      font-size: rem(40);
+    }
+    .tab-content {
+      margin-top: 45px;
+      padding: 0;
+      .attributes-table {
+        width: 77%;
+        float: right;
+      }
+    }
+  }
+  @include media(md) {
+    .tab-content .attributes-table tr.hidden-row {
+      display: table-row;
+    }
+  }
+
+}

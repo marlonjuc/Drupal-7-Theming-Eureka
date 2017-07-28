@@ -1,0 +1,32 @@
+.component-n009 {
+    margin-top: 80px;
+    .n009-pathing-tile {
+        padding: 3px;
+    }
+    .n009-title {
+        text-align: center;
+        color: $eurekaBlack;
+        margin-bottom: 10px;
+    }
+    .view-content {
+        padding: 0 9px;
+        margin-bottom: 45px;
+    }
+}
+@include media(sm){
+    .component-n009 {
+        .n009-pathing-tile {
+            padding: 5px;
+        }
+        .n009-title {
+            margin-bottom: 40px;
+        }
+    }
+}
+@include media(md){
+    .component-n009 {
+        .n009-pathing-tile {
+            padding: 8px;
+        }
+    }
+}

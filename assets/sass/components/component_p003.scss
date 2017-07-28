@@ -1,0 +1,619 @@
+/* Note: This component is using desktop first approach.
+  This needs to be updated to mobile first when there is some free time
+*/
+
+.pdp-p003 {
+
+    img {
+        outline: none;
+    }
+    .pdp-sales-banner__sub {
+        margin-top: 20px;
+    }
+
+    .pdp-details-container {
+        outline: none !important;
+        .pdp-button__addToCart-placeholder input {
+            border: none;
+            background: none;
+            text-transform: uppercase;
+            outline: none;
+        }
+        .pdp-button {
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .commerce-product-field {
+            display: inline;
+        }
+        .commerce-add-to-cart {
+            .form-submit {
+                display: none;
+            }
+        }
+        .attribute-widgets {
+            label {
+                display: none;
+            }
+        }
+        .form-item-attributes-field-product-color {
+            display: inline-block;
+            width: auto;
+            .description > div {
+                margin-bottom: 3px;
+            }
+            .description > .description-selected  {
+                margin-bottom: 0;
+                padding: 1px;
+                border: 2px solid $eurekaPrimaryGreen;
+            }
+            .commerce-fancy-attributes-color {
+                width: 60px;
+                height: 10px;
+                border: none;
+            }
+        }
+    }
+
+    .pdp-carousel__zoom--wrapper {
+        .pdp-carousel-modal-controller {
+            display: none;
+        }
+    }
+
+    .pdp-wrapper {
+        .pdp-modal__open & {
+            // position: fixed;
+            // top: 0;
+            z-index: 23;
+            .container {
+                //position: relative;
+            }
+            .pdp-carousel__freecountry-logo {
+                display: none;
+            }
+            .pdp-carousel__zoom--wrapper {
+                height: 100vh;
+                padding-top: 30px;
+                height: 1000vh;
+                //position: fixed;
+                //top: 0;
+                //right: 0;
+                .pdp-carousel-modal-controller  {
+                    display: block;
+                }
+                .pdp-carousel-thumbnails {
+                    // margin-top: 32px;
+                    .slick-slide {
+                        // margin: 0 auto 5px;
+                        // float: none;
+                    }
+                }
+                .pdp-carousel__zoom--magnify-glass {
+                    display: none;
+                }
+            }
+            .pdp-head-container {
+                z-index: 24;
+                background-color:rgba(255,255,255,0.77);
+                height: 1000vh;
+                padding-top: 30px;
+                left: 80px;
+                // position: absolute;
+                transition: all 0.5s ease 0s;
+                &.panel-open{
+                    position: fixed;
+                    top:0;
+                    &.animate{
+                        left: 10px;
+                    }
+                }
+            }
+            .pdp-photo-wrapper {
+                position: fixed;
+                right: 8.33333%;
+                z-index: 23;
+                min-height: 650px;
+                width: 100%;
+                top: 30px;
+                .pdp-carousel-display {
+                    text-align: right;
+                    top: 200px;
+                    height: 100vh;
+                }
+                img {
+                    position: relative;
+                    margin-top: 0;
+                    width: 60%;
+                    top: 150px
+                }
+            }
+            .pdp-carousel__zoom--wrapper {
+                background: white;
+                z-index: 25;
+                // position: absolute;
+                right: 80px;
+                transition: all 0.5s ease 0s;
+                &.panel-open{
+                    position: fixed;
+                    top:0;
+                    &.animate {
+                        right: 10px;
+                    }
+                    .pdp-carousel-thumbnails{
+                        margin-top: 0;
+                    }
+                }
+            }
+            .pdp-carousel__zoom--close,
+            .pdp-carousel__zoom-in,
+            .pdp-carousel__zoom-out {
+                background-repeat: no-repeat;
+                display: block;
+                height: 32px;
+                margin: 0 auto 10px;
+                width: 32px;
+            }
+            .pdp-carousel__zoom--close {
+                background-image: url("../img/icon-pdp-close.png");
+                width: 22px;
+                height: 22px;
+                margin-bottom: 25px;
+            }
+            .pdp-carousel__zoom-in {
+                background-image: url("../img/icon-pdp-zoom-in.png");
+            }
+            .pdp-carousel__zoom-out {
+                background-image: url("../img/icon-pdp-zoom-out.png");
+                margin-bottom: 0;
+            }
+        }
+    }
+
+
+    .pdp-carousel__freecountry-logo {
+        width: 130px;
+        height: 130px;
+        background: url("../img/icon-approved.png") no-repeat;
+        background-size: 127px 130px;
+        position: absolute;
+        top: 100px;
+        right: 20px;
+    }
+
+
+    .pdp-carousel-thumbnails {
+        margin-top: 80px;
+        .slick-list.draggable {
+            padding: 0px !important;
+            margin-top:30px;
+            margin-bottom: 30px;
+        }
+        .slick-slide {
+            height: 65px;
+            width: 65px !important;
+            //object-fit: cover;
+            outline: none;
+            cursor: pointer;
+            //margin-bottom: 5px;
+            background-size: cover;
+            background-position: center center;
+            margin: 10px;
+            &.slick-current {
+                border: 2px solid $eurekaPrimaryGreen;
+            }
+            img{
+                opacity: 0;
+                max-width: 100%;
+            }
+
+        }
+        .slick-prev-custom {
+                background: url("../img/icon-global-list-down.png") no-repeat;
+                width: 20px;
+                height: 10px;
+                background-size: contain;
+                position: absolute;
+                top: -20px;
+                transform: rotate(180deg);
+                cursor: pointer;
+                margin-left: 20px;
+        }
+        .slick-next-custom {
+            background: url("../img/icon-global-list-down.png") no-repeat;
+            width: 20px;
+            height: 10px;
+            position: absolute;
+            background-size: contain;
+            bottom: -20px;
+            cursor: pointer;
+            margin-left: 25px;
+        }
+    }
+    .pdp-carousel-display {
+        img {
+            width: 100%;
+            margin-top: 150px;
+        }
+    }
+    .pdp-new {
+        color: #707F2A;
+        font-size: 18px;
+        margin-bottom: 16px;
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: $graphicBlack;
+    }
+
+    .pdp-manufacturingproductname {
+        color: #000;
+        font-size: rem(48);
+        line-height: 48px;
+        margin-bottom: 24px;
+        font-family: $graphicBold;
+        text-transform: uppercase;
+    }
+
+    .pdp-product-description {
+        color: #000;
+        font-size: 12px;
+        margin-bottom: 12px;
+        font-family: $graphicRegular;
+    }
+
+    .pdp-rating {
+        margin-bottom: 18px;
+    }
+
+    .pdp-certlevel {
+        margin-right: 10px;
+        float: left;
+    }
+
+    .pdp-catalogstatus {
+        float: left;
+        color: #4C4C4A;
+        margin-top: 2px;
+        font-size: 12px;
+        font-family: $graphicSemiBold;
+    }
+
+    .pdp-itemnumber {
+        color: #4C4C4A;
+        font-size: 12px;
+        line-height: 16px;
+        font-family: $graphicRegular;
+        text-align: right;
+    }
+
+    .pdp-pricing {
+        margin-bottom: 18px;
+    }
+
+    .pdp-retailprice {
+        color: #A5A5A4;
+        font-size: 20px;
+        margin-right: 8px;
+        display: inline-block;
+        font-family: $graphicRegular;
+    }
+
+    .pdp-retailprice .line-through {
+        top: -14px;
+        width: 108%;
+        height: 2px;
+        display: block;
+        margin-left: -4%;
+        position: relative;
+        background-color: #A5A5A4;
+    }
+
+    .pdp-commerceprice {
+        color: #000;
+        font-size: 20px;
+        display: inline-block;
+        font-family: $graphicRegular;
+    }
+
+    .pdp-quantity {
+        color: #4C4C4A;
+        font-size: 12px;
+        font-family: $graphicSemiBold;
+    }
+
+    .pdp-offer-disclaimer {
+        margin-bottom: 18px;
+        p {
+            color: #707F2A;
+            font-size: 12px;
+            font-family: $graphicSemiBold;
+        }
+    }
+
+    .pdp-carousel__zoom--wrapper {
+
+        .pdp-carousel__zoom--magnify-glass {
+            float: right;
+            width: 44px;
+            height: 44px;
+            display: none;
+            background: url("../img/icon-pdp-magnifying-glass.png") no-repeat;
+            background-size: contain;
+            margin-right: 13px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            animation: fadeIn 1s;
+
+        }
+    }
+    .pdp-carousel__zoom--wrapper:hover {
+        .pdp-carousel__zoom--magnify-glass {
+            animation: fadeIn 1s;
+            display: block;
+        }
+    }
+
+    .pdp-modal__desktop {
+
+        &--open{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background: white;
+            z-index: 20;
+            left: 0;
+        }
+
+    }
+
+    .module-buttons{
+        .button{
+            margin-left:0;
+        }
+    }
+    //Hide bars color and description when modal is open
+    .pdp-colors-controlers,
+    .pdp-product-description{
+        .pdp-modal__open &{
+            display: none;
+        }
+    }
+    //Hide ajax progress bar of BE slider color bar
+    .ajax-progress{
+        display: none !important;
+    }
+
+    .selectric-items{
+        width: 230% !important;
+        left: -128%;
+    }
+
+    // Modal Mobile
+    #pdp-modal__mobile {
+        .modal-dialog {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .modal-content {
+            // height: auto;
+            height: 100%;
+            min-height: 100%;
+            border-radius: 0;
+        }
+        .modal-header,
+        .modal-body,
+        .modal-footer {
+            border: none;
+        }
+        .modal-header {
+            height: 10%;
+            .close {
+                color: #4C4C4A;
+                opacity: 1;
+                margin-top: -10px;
+                span {
+                    font-size: 30px;
+                }
+            }
+        }
+        .modal-body { // Display
+            height: 70%;
+            top: 0px;
+            img {
+                position: relative;
+                width: 100%;
+                top: 0%;
+            }
+
+
+        }
+        .slick-track {
+            width: auto !important;
+        }
+        .modal-footer {
+            height: 20%;
+            padding: 15px 40px;
+            .slick-list.draggable {
+                padding-top: 2px;
+                padding-left: 2px;
+            }
+            .slick-slide {
+                outline: none;
+                cursor: pointer;
+                width: 84px !important;
+                height: 84px;
+                object-fit: cover;
+                margin: 5px;
+                &.slick-current {
+                    outline: 3px solid $eurekaPrimaryGreen;
+                }
+            }
+        }
+
+    }
+
+    //Tablet Breakpoint
+    @include media(sm){
+        //Modal Mobile
+        #pdp-modal__mobile {
+
+            .modal-footer {
+                padding:0 15px;
+                .slick-slider {
+                    margin-left: 15px;
+
+                }
+                .slick-slide {
+                    width: 54px;
+                    object-fit: cover;
+                    margin-right: 5px;
+                }
+            }
+
+        }
+
+    }
+
+    /*Tablet Breakpoint*/
+    @media screen and (max-width: 1024px) {
+
+        .pdp-details-container {
+
+            .pdp-button {
+                width: 100%;
+            }
+            .form-item-attributes-field-product-color {
+                .commerce-fancy-attributes-color {
+                    //width: 150px !important;
+                    width: 150px;
+                }
+            }
+        }
+        .flex-control-paging {
+            display: block !important;
+        }
+        .pdp-wrapper {
+            padding-left: 0px;
+            margin-top: 0px;
+        }
+        .hide-on-mobile {
+            display: none;
+        }
+        .pdp-carousel__trigger {
+            .slick-dots {
+                width: 200px;
+            }
+        }
+        .pdp-carousel-wrapper_mobile {
+            .slick-list.draggable {
+                margin-bottom: 50px;
+            }
+            .slick-dots {
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                top: -30px;
+            }
+            .slick-dots li button {
+                border: 1px solid $eurekaBeige;
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+            }
+            .slick-dots li.slick-active button {
+                background-color: $eurekaBeige;
+            }
+            .slick-dots li button:before {
+                content: ' ';
+            }
+        }
+
+        .pdp-commerceprice,
+        .pdp-retailprice {
+            font-size: 36px;
+        }
+        .pdp-carousel__freecountry-logo {
+            top: 0;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        #pdp-modal__mobile {
+            .modal-body {
+                img {
+                    top: 25%;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 767px) {
+        .container {
+
+        }
+        .pdp-commerceprice,
+        .pdp-retailprice {
+            font-size: 24px;
+        }
+        .pdp-pricing {
+            margin-top: 6px;
+            margin-bottom: 0px;
+            .pdp-retailprice,
+            .pdp-commerceprice {
+                font-size: 19px;
+            }
+        }
+        .pdp-carousel__freecountry-logo {
+            width: 75px;
+            height: 75px;
+            background-size: 72px 75px;
+            right: 0;
+        }
+        .pdp-manufacturingproductname {
+            margin-bottom: 0px;
+            font-size: 40px;
+        }
+        .pdp-carousel-wrapper_mobile {
+            .slick-dots li {
+                margin: 0px;
+            }
+            .slick-dots li button {
+                width: 10px;
+                height: 10px;
+            }
+            .slick-list.draggable {
+                margin-top: 30px;
+           }
+        }
+        .pdp-carousel__freecountry-logo {
+            margin-top: 2px;
+        }
+        .pdp-colors-controlers {
+            //display: none;
+        }
+        .selectric {
+            width: auto;
+        }
+        .selectric-items {
+            width: 300% !important;
+            left: -200%;
+            z-index: 10;
+        }
+        .pdp-details-container {
+            .form-item-attributes-field-product-color {
+                .commerce-fancy-attributes-color {
+                    //width: 150px !important;
+                    width: 60px;
+                }
+            }
+        }
+
+    } // ./ media
+
+} // ./ pdp-p003
